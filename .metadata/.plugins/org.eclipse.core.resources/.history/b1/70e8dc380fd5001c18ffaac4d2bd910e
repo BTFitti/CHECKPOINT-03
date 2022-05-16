@@ -1,0 +1,13 @@
+package br.com.fiap.jpa.service.impl;
+
+import br.com.fiap.jpa.entity.Boleto;
+import br.com.fiap.jpa.service.GenericService;
+
+public class BoletoServiceImpl extends GenericService<Boleto, Long> {
+
+	private static BoletoServiceImpl instance = null;
+	
+	private BoletoDAOImpl boletoDAO;
+}
+
+

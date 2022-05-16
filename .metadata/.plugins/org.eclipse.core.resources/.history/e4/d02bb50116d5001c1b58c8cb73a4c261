@@ -1,0 +1,13 @@
+package br.com.fiap.jpa.app;
+
+import br.com.fiap.jpa.service.impl.BoletoServiceImpl;
+
+public class Main {
+
+	public static void main(String[] args) {
+	BoletoServiceImpl boletoService = BoletoServiceImpl.getInstance();
+	PedidoServiceImpl pedidoService = PedidoServiceImpl.getInstance();
+
+	}
+
+}

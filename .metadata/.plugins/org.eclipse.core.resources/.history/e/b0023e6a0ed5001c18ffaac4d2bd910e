@@ -1,0 +1,18 @@
+package br.com.fiap.dao.impl;
+
+
+public class ProdutoDAOImpl extends HibernateGenericDAO<Pedido, Long>{
+	private static ProdutoDAOImpl instance = null;
+
+	public static ProdutoDAOImpl  getInstance() {
+		if (instance == null) {
+			instance = new ProdutoDAOImpl ();
+		}
+
+		return instance;
+	}
+
+	private ProdutoDAOImpl () {
+		super(Pedido.class);
+	}
+}

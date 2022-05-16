@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="br.com.fiap.jpa.service.impl.BoletoServiceImpl"/>
+    <fullyQualifiedTypeName name="br.com.fiap.jpa.service.impl.PedidoServiceImpl"/>
+    <fullyQualifiedTypeName name="br.com.fiap.jpa.service.impl.ItemPedidoServiceImpl"/>
+    <fullyQualifiedTypeName name="br.com.fiap.jpa.service.impl.ProdutoServiceImpl"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+    <fullyQualifiedTypeName name="java.awt.List"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="javax.persistence.TypedQuery"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+</qualifiedTypeNameHistroy>

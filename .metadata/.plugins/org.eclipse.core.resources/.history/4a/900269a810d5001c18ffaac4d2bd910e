@@ -1,0 +1,80 @@
+package br.com.fiap.jpa.service.impl;
+
+import java.util.List;
+
+import br.com.fiap.dao.impl.PedidoDAOImpl;
+import br.com.fiap.jpa.entity.Pedido;
+import br.com.fiap.jpa.service.GenericService;
+
+public class PedidoServiceImpl extends GenericService<Pedido, Long> {
+
+	private static PedidoServiceImpl instance = null;
+
+	private PedidoDAOImpl pedidoDAO;
+
+	private PedidoServiceImpl() {
+		pedidoDAO = PedidoDAOImpl.getInstance();
+	}
+
+	@Override
+	public void atualizar(Pedido pedido) {
+		try {
+			pedidoDAO.atualizar(pedido, getEntityManager());
+		} catch (Exception e) {
+			getEntityManager().getTransaction().rollback();
+		} finally {
+			closeEntityManager();
+		}
+
+	}
+
+	@Override
+	public void remover(Long id) {
+		try {
+			pedidoDAO.remover(id, getEntityManager());
+		} catch (Exception e) {
+			e.printStackTrace();
+			getEntityManager().getTransaction().rollback();
+		} finally {
+			closeEntityManager();
+		}
+
+	}
+
+	@Override
+	public Pedido obter(Long id) {
+		Pedido pedido = null;
+
+		try {
+			pedido = pedidoDAO.obterPorId(id, getEntityManager());
+		} catch (Exception e) {
+		} finally {
+			closeEntityManager();
+		}
+
+		return pedido;
+	}
+
+	@Override
+	public List<Pedido> listar() {
+		List<Pedido> pedidos= null;
+
+		try {
+//			alunos = alunoDAO.listar(getEntityManager());
+			pedidos = pedidoDAO.listar(getEntityManager());
+		} catch (Exception e) {
+		} finally {
+			closeEntityManager();
+		}
+
+		return pedidos;
+	}
+
+
+	@Override
+	public void inserir(Pedido instance) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
